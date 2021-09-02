@@ -10,7 +10,7 @@ let newBalance;
 
 function validatePin(passCode){
     if(pin === passCode){
-        console.log("This is the correct pin.")
+        console.log("This is the correct pin.");
         return true
     }
     return false;
@@ -22,26 +22,26 @@ function getBalance(){
 
 function withdraw(){
 let withdrawAmmount;
-newBalance = balance
+newBalance = balance;
 console.log(balance);
-withdrawAmmount = parseInt(prompt("How much would you like."))
+withdrawAmmount = parseInt(prompt("How much would you like."));
     if(withdrawAmmount > balance){
-    console.log("You don't have enough funds.")
+    console.log("You don't have enough funds.");
     }
     else{
-    newBalance = newBalance - withdrawAmmount
-    balance = newBalance
+    newBalance = newBalance - withdrawAmmount;
+    balance = newBalance;
     return balance
     }
 }
 
 function deposit(){
     let depositAmmount;
-    newBalance = balance
+    newBalance = balance;
     console.log(balance);
-    depositAmmount = parseInt(prompt("How much would you like to deposit."))
-    newBalance = newBalance + depositAmmount
-    balance = newBalance
+    depositAmmount = parseInt(prompt("How much would you like to deposit."));
+    newBalance = newBalance + depositAmmount;
+    balance = newBalance;
     return balance
 }
 

@@ -6,21 +6,8 @@ const { balance } = require('./account');
 let atm = require(`./atm`);
 let {getBal, valPin, takeMoney, giveMoney} = atm;
 
-
-// while(pin !== passCode){
-//     passCode = parseInt(prompt("Enter Pin"));
-//     atmWork(balance, pin, passCode)
-// }
-
-    // console.log(valPin(pin, passCode));
-    // while(pin !== passCode){
-    //     valPin(pin);
-    // return passCode
-    // }    
-    
-
 function atmWork(){
-    let menu = `1. To Withdraw \n 2. To Deposit \n 3. For Balance`
+    let menu = `1. To Withdraw \n 2. To Deposit \n 3. For Balance`;
     let passCode = parseInt(prompt("Enter Pin"));
     let userValidated = false;
     let userDone = false;
@@ -29,7 +16,7 @@ function atmWork(){
     }while(!userValidated)
     do{
 
-        let userImput = prompt(menu)
+        let userImput = prompt(menu);
         switch(userImput){
             case "1":
                 takeMoney();
@@ -41,11 +28,11 @@ function atmWork(){
                 getBal();
                 break;
             default:
-                console.log("Invalid Imput")
+                console.log("Invalid Imput");
         }
         userDone = areUDone();
     }while(!userDone)
-    console.log("Your current Balance is")
+    console.log("Your current Balance is");
     getBal();
 }     
 atmWork()
